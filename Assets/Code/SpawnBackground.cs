@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class SpawnBackground : MonoBehaviour {
 
-	// Use this for initialization
+    public SpriteRenderer[] LeftLeaf, RightLeaf;
+    public Sprite[] LeftLeafSprites, RightLeafSprites;
+
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        int left = Random.Range(0, LeftLeafSprites.Length - 1);
+        int right = Random.Range(0, RightLeafSprites.Length - 1);
+
+        foreach(SpriteRenderer leaf in LeftLeaf)
+        {
+            leaf.sprite = LeftLeafSprites[left];
+        }
+
+        foreach (SpriteRenderer leaf in RightLeaf)
+        {
+            leaf.sprite = RightLeafSprites[right];
+        }
+    }
+
 }

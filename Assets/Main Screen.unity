@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 26276697}
   - component: {fileID: 26276698}
   m_Layer: 0
-  m_Name: palm_one_emerald_green
+  m_Name: Left Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 285720520}
   - component: {fileID: 285720521}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Left Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -665,6 +665,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 389255652}
+  - component: {fileID: 389255653}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -688,6 +689,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &389255653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389255651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f695199796dd3418493900b5052f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftLeaf:
+  - {fileID: 26276698}
+  RightLeaf:
+  - {fileID: 1482008392}
+  - {fileID: 988728265}
+  - {fileID: 463986753}
+  LeftLeafSprites:
+  - {fileID: 21300000, guid: 0e57853b7a68446478ffd2b9d513a3fb, type: 3}
+  - {fileID: 21300000, guid: 3edaea3796b542b4288fcb73b5474b0a, type: 3}
+  - {fileID: 21300000, guid: 045ae223b4dd75d4bb15359ddbd6dbc5, type: 3}
+  - {fileID: 21300000, guid: 6f55ab8c4b53f304cb46c04366b2e882, type: 3}
+  - {fileID: 21300000, guid: 628fd5ee3a80ae14fa860580865bf97e, type: 3}
+  RightLeafSprites:
+  - {fileID: 21300000, guid: 0c2bb538d5013c44181c5653ff35f9a8, type: 3}
+  - {fileID: 21300000, guid: e262f0edc81385c44afb6c3e7ddde212, type: 3}
+  - {fileID: 21300000, guid: 0c07d92af9a7b6f46bf084ab7c5b5723, type: 3}
 --- !u!1 &423481423
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +1010,7 @@ GameObject:
   - component: {fileID: 463986752}
   - component: {fileID: 463986753}
   m_Layer: 0
-  m_Name: plant_1_leaf_1_purple (2)
+  m_Name: Right Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1056,6 +1084,7 @@ GameObject:
   - component: {fileID: 593636433}
   - component: {fileID: 593636432}
   - component: {fileID: 593636431}
+  - component: {fileID: 593636437}
   - component: {fileID: 593636436}
   - component: {fileID: 593636435}
   m_Layer: 0
@@ -1181,6 +1210,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.12348233, y: -0.23152892}
   m_Size: {x: 1.1039762, y: 0.57917124}
   m_Direction: 1
+--- !u!114 &593636437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 593636430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f323bc8cac2c55843affe6fece0449f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumDinoColors: 3
 --- !u!1 &878721373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1451,7 @@ GameObject:
   - component: {fileID: 988728264}
   - component: {fileID: 988728265}
   m_Layer: 0
-  m_Name: plant_1_leaf_1_purple (1)
+  m_Name: Right Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1556,7 +1597,7 @@ GameObject:
   - component: {fileID: 1482008391}
   - component: {fileID: 1482008392}
   m_Layer: 0
-  m_Name: plant_1_leaf_1_purple
+  m_Name: Right Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1865,7 +1906,7 @@ GameObject:
   - component: {fileID: 1721652698}
   - component: {fileID: 1721652699}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Right Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
