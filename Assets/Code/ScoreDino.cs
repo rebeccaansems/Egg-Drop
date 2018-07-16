@@ -6,21 +6,18 @@ public class ScoreDino : MonoBehaviour
 {
     public GameObject StarterEgg;
 
-    private List<GameObject> AllEggs;
-
     void Start()
     {
-        AllEggs = new List<GameObject>();
-        AllEggs.Add(StarterEgg);
+        GameData.k_AllEggs = new List<GameObject>();
+        GameData.k_AllEggs.Add(StarterEgg);
     }
 
     void Update()
     {
-        AllEggs.RemoveAll(item => item == null);
-
-        if (AllEggs.Count == 0 && this.GetComponent<Animator>().GetBool("IsDead") == false)
+        if (GameData.k_AllEggs.Count == 0 && this.GetComponent<Animator>().GetBool("IsDead") == false)
         {
             this.GetComponent<Animator>().SetBool("IsDead", true);
+            GameData.k_GameRunning = false;
         }
     }
 
