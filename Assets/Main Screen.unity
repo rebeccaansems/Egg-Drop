@@ -1100,7 +1100,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 984332203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.65, y: -4.83, z: 0}
+  m_LocalPosition: {x: 0, y: -4.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2136634305}
@@ -1285,7 +1285,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -619742545
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 4ab4fbe8110831a43873344125965bb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1334,15 +1334,6 @@ Prefab:
     - target: {fileID: 4871966505955722, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114508540295501142, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
-        type: 2}
-      propertyPath: isDefaultEgg
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076247778134516, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
-      propertyPath: m_TagString
-      value: Egg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
