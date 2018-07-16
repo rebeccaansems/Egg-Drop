@@ -7,6 +7,7 @@ public class MoveDino : MonoBehaviour
     public float MoveSpeed = 0.1f;
 
     private Vector3 mousePosition, oldPosition;
+    private Vector2[] colliderOffsetLeft, colliderOffsetRight;
     private Rect cameraRect;
 
     void Start()
@@ -20,6 +21,22 @@ public class MoveDino : MonoBehaviour
             bottomLeft.y,
             topRight.x - bottomLeft.x,
             topRight.y - bottomLeft.y);
+
+        colliderOffsetLeft = new Vector2[2];
+        colliderOffsetRight = new Vector2[2];
+
+        colliderOffsetLeft[0] = new Vector2(
+            -this.GetComponents<CapsuleCollider2D>()[0].offset.x,
+            this.GetComponents<CapsuleCollider2D>()[0].offset.y);
+        colliderOffsetRight[0] = new Vector2(
+            this.GetComponents<CapsuleCollider2D>()[0].offset.x,
+            this.GetComponents<CapsuleCollider2D>()[0].offset.y);
+        colliderOffsetLeft[1] = new Vector2(
+            -this.GetComponents<CapsuleCollider2D>()[1].offset.x,
+            this.GetComponents<CapsuleCollider2D>()[1].offset.y);
+        colliderOffsetRight[1] = new Vector2(
+            this.GetComponents<CapsuleCollider2D>()[1].offset.x,
+            this.GetComponents<CapsuleCollider2D>()[1].offset.y);
     }
 
     void FixedUpdate()
@@ -34,9 +51,14 @@ public class MoveDino : MonoBehaviour
         if ((oldPosition.x - this.transform.position.x) < -0.03f)
         {
             this.GetComponent<SpriteRenderer>().flipX = true;
-        } else if ((oldPosition.x - this.transform.position.x) > 0.03f)
+            this.GetComponents<CapsuleCollider2D>()[0].offset = colliderOffsetLeft[0];
+            this.GetComponents<CapsuleCollider2D>()[1].offset = colliderOffsetLeft[1];
+        }
+        else if ((oldPosition.x - this.transform.position.x) > 0.03f)
         {
             this.GetComponent<SpriteRenderer>().flipX = false;
+            this.GetComponents<CapsuleCollider2D>()[0].offset = colliderOffsetRight[0];
+            this.GetComponents<CapsuleCollider2D>()[1].offset = colliderOffsetRight[1];
         }
         oldPosition = this.transform.position;
     }
