@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveEgg : MonoBehaviour {
-
+public class MoveEgg : MonoBehaviour
+{
     public float MaxSpeed = 200f;
 
     void FixedUpdate()
@@ -12,5 +12,10 @@ public class MoveEgg : MonoBehaviour {
         {
             this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity.normalized * MaxSpeed;
         }
+    }
+
+    void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
     }
 }

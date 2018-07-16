@@ -10,6 +10,8 @@ public class MoveDino : MonoBehaviour
     private Vector2[] colliderOffsetLeft, colliderOffsetRight;
     private Rect cameraRect;
 
+    private bool isLeft = true;
+
     void Start()
     {
         var bottomLeft = Camera.main.ScreenToWorldPoint(Vector3.zero);
@@ -41,24 +43,36 @@ public class MoveDino : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (this.GetComponent<Animator>().GetBool("IsDead") == false)
+        {
+            Move();
+        }
+    }
+
+    void Move()
+    {
         mousePosition = new Vector3(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
-            cameraRect.xMin, cameraRect.xMax), this.transform.position.y, 0);
+           cameraRect.xMin, cameraRect.xMax), this.transform.position.y, 0);
         this.transform.position = Vector2.MoveTowards(this.transform.position, mousePosition, MoveSpeed * Time.deltaTime);
 
         float speed = (this.transform.position - oldPosition).magnitude / Time.deltaTime;
         this.GetComponent<Animator>().SetFloat("Speed", speed);
 
-        if ((oldPosition.x - this.transform.position.x) < -0.03f)
+        if ((oldPosition.x - this.transform.position.x) < -0.03f && isLeft == false)
         {
             this.GetComponent<SpriteRenderer>().flipX = true;
             this.GetComponents<CapsuleCollider2D>()[0].offset = colliderOffsetLeft[0];
             this.GetComponents<CapsuleCollider2D>()[1].offset = colliderOffsetLeft[1];
+
+            isLeft = true;
         }
-        else if ((oldPosition.x - this.transform.position.x) > 0.03f)
+        else if ((oldPosition.x - this.transform.position.x) > 0.03f && isLeft == true)
         {
             this.GetComponent<SpriteRenderer>().flipX = false;
             this.GetComponents<CapsuleCollider2D>()[0].offset = colliderOffsetRight[0];
             this.GetComponents<CapsuleCollider2D>()[1].offset = colliderOffsetRight[1];
+
+            isLeft = false;
         }
         oldPosition = this.transform.position;
     }
