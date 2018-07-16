@@ -6,7 +6,7 @@ public class MoveDino : MonoBehaviour
 {
     public float MoveSpeed = 0.1f;
 
-    private Vector2 mousePosition, oldPosition;
+    private Vector3 mousePosition, oldPosition;
     private Rect cameraRect;
 
     void Start()
@@ -24,14 +24,17 @@ public class MoveDino : MonoBehaviour
 
     void FixedUpdate()
     {
-        mousePosition = new Vector2(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
-            cameraRect.xMin, cameraRect.xMax), this.transform.position.y);
+        mousePosition = new Vector3(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
+            cameraRect.xMin, cameraRect.xMax), this.transform.position.y, 0);
         this.transform.position = Vector2.MoveTowards(this.transform.position, mousePosition, MoveSpeed * Time.deltaTime);
 
-        if (oldPosition.x < this.transform.position.x)
+        float speed = (this.transform.position - oldPosition).magnitude / Time.deltaTime;
+        this.GetComponent<Animator>().SetFloat("Speed", speed);
+
+        if ((oldPosition.x - this.transform.position.x) < -0.03f)
         {
             this.GetComponent<SpriteRenderer>().flipX = true;
-        } else if (oldPosition.x != this.transform.position.x)
+        } else if ((oldPosition.x - this.transform.position.x) > 0.03f)
         {
             this.GetComponent<SpriteRenderer>().flipX = false;
         }
