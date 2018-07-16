@@ -772,6 +772,7 @@ GameObject:
   - component: {fileID: 425071710}
   - component: {fileID: 425071709}
   - component: {fileID: 425071708}
+  - component: {fileID: 425071713}
   - component: {fileID: 425071712}
   m_Layer: 0
   m_Name: Egg
@@ -926,6 +927,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxSpeed: 12
+--- !u!114 &425071713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 425071707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c1cd5f6d488074f861cec37b41ee01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllEggs:
+  - {fileID: 21300000, guid: 42517a36c29822b4e869bb2a08c73bdf, type: 3}
+  - {fileID: 21300000, guid: fcee90c47d08d3141b575b74f73fd100, type: 3}
+  - {fileID: 21300000, guid: 2641a8c269991ef42b6f1e3a0ccd2f1b, type: 3}
+  - {fileID: 21300000, guid: f391e52aa88e7514bb99471080f3ff53, type: 3}
+  - {fileID: 21300000, guid: 2798c54e8face524298e7f33ad862023, type: 3}
+  - {fileID: 21300000, guid: 1b36c90f23a589c49bc32fde1a438bab, type: 3}
+  - {fileID: 21300000, guid: 4ffb69bff5b8e2c4781000acd4938c50, type: 3}
+  - {fileID: 21300000, guid: f90178720b14f954697964e510ea5456, type: 3}
+  - {fileID: 21300000, guid: 0ffe44886244bb649b4d6527502dfb97, type: 3}
+  - {fileID: 21300000, guid: 6d7e2667f6d157541a7bfd114f8eca15, type: 3}
+  - {fileID: 21300000, guid: af94aaadde6715d4db24dabf27cc67d2, type: 3}
+  - {fileID: 21300000, guid: a95d74914e3298f41b9d9fddbcca0a28, type: 3}
+  - {fileID: 21300000, guid: d39c9a61436cd304db8b0515464a1429, type: 3}
+  - {fileID: 21300000, guid: 0409d66f4d8ba2f44891b888f71564fa, type: 3}
+  - {fileID: 21300000, guid: f5f9bfac5926d3a47bc778491f774276, type: 3}
+  - {fileID: 21300000, guid: 8c1f894506be5d94bbc449e545a97f03, type: 3}
+  - {fileID: 21300000, guid: 357e280c35a4d80419b2f633b5a8961b, type: 3}
+  - {fileID: 21300000, guid: a39cebf36c0101d4d8f76f2aa9e9f6a2, type: 3}
+  - {fileID: 21300000, guid: 81a83a60bb20f1842aa0c0011b47cd8b, type: 3}
+  - {fileID: 21300000, guid: 77c8d09ab7a9c4949bcbac74492c59b4, type: 3}
+  - {fileID: 21300000, guid: 96bc8f078ed0cb649ba0befe7b307561, type: 3}
+  - {fileID: 21300000, guid: 21898b1694bae5244a00e0dafb7038e8, type: 3}
+  - {fileID: 21300000, guid: 89a517cb104c73549bb70f7ab34889c9, type: 3}
+  - {fileID: 21300000, guid: 1fb725d3ef379cd488eca64d16f1b631, type: 3}
+  - {fileID: 21300000, guid: 27b7046222793d04eac3b79665966695, type: 3}
+  - {fileID: 21300000, guid: 127ba52291ac9c8449d5447fbfb1eb52, type: 3}
+  - {fileID: 21300000, guid: 53da5def3254b7748aeddefe5d9d3ba6, type: 3}
+  - {fileID: 21300000, guid: 7539a2aa4337f8f4cad1d17f78fda273, type: 3}
+  - {fileID: 21300000, guid: 424427bf806f7a641a25ec587189b4bb, type: 3}
+  - {fileID: 21300000, guid: bdebcf07c70d0214f90334de07b5caa9, type: 3}
+  - {fileID: 21300000, guid: 9b5523f28a60b2549bcf54c378dec770, type: 3}
+  - {fileID: 21300000, guid: 6fc891816b1f47e4eaedea8e57714323, type: 3}
+  - {fileID: 21300000, guid: 75b7885bb4e00fd4c9f409079eae1df4, type: 3}
 --- !u!1 &463986751
 GameObject:
   m_ObjectHideFlags: 0

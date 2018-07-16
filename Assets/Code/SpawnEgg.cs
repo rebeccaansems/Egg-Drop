@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class SpawnEgg : MonoBehaviour {
 
-	// Use this for initialization
+    public Sprite[] AllEggs;
+
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        this.GetComponent<SpriteRenderer>().sprite = AllEggs[Random.Range(0, AllEggs.Length - 1)];
 	}
 }
