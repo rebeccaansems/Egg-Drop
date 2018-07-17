@@ -16,6 +16,7 @@ public class GameData : MonoBehaviour
         if (k_GameRunning == false)
         {
             StartCoroutine(Restart());
+            k_GameRunning = true;
         }
     }
 
