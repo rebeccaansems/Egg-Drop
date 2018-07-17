@@ -21,5 +21,4 @@ public class SpawnBackground : MonoBehaviour {
             leaf.sprite = RightLeafSprites[right];
         }
     }
-
 }
