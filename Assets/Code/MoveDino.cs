@@ -39,6 +39,8 @@ public class MoveDino : MonoBehaviour
         colliderOffsetRight[1] = new Vector2(
             this.GetComponents<CapsuleCollider2D>()[1].offset.x,
             this.GetComponents<CapsuleCollider2D>()[1].offset.y);
+
+        mousePosition = this.transform.position;
     }
 
     void FixedUpdate()
