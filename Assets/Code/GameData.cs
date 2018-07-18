@@ -10,30 +10,33 @@ public class GameData : MonoBehaviour
     public static int k_Score = 0;
     public static bool k_GameRunning = true;
 
+    public GameObject EndGamePanel;
     public Text ScoreText;
 
     void Start()
     {
         k_Score = 0;
+        Time.timeScale = 1;
     }
 
     void Update()
     {
-        GameData.k_AllEggs.RemoveAll(item => item == null);
-
         if (k_GameRunning == false)
         {
-            StartCoroutine(Restart());
+            StartCoroutine(GameOver());
             k_GameRunning = true;
         }
-
-        ScoreText.text = k_Score.ToString();
+        else
+        {
+            GameData.k_AllEggs.RemoveAll(item => item == null);
+            ScoreText.text = k_Score.ToString();
+        }
     }
 
-    //temp
-    IEnumerator Restart()
+    IEnumerator GameOver()
     {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        yield return new WaitForSeconds(1);
+        Time.timeScale = 0;
+        EndGamePanel.GetComponent<UIEndGame>().ShowPanel();
     }
 }
