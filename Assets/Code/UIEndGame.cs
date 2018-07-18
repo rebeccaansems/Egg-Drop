@@ -12,15 +12,17 @@ public class UIEndGame : MonoBehaviour
     {
         this.GetComponent<CanvasGroup>().alpha = 0;
         this.GetComponent<CanvasGroup>().interactable = false;
+        this.GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
     public void ShowPanel()
     {
         this.GetComponent<CanvasGroup>().alpha = 1;
         this.GetComponent<CanvasGroup>().interactable = true;
+        this.GetComponent<CanvasGroup>().blocksRaycasts = true;
 
         FinalGameScoreText.text = GameData.k_Score.ToString();
-        MoreGameDataText.text = string.Format("Eggs: {0}\nBounces: {1}\nSeconds: {2}", 0, 0, 0);
+        MoreGameDataText.text = string.Format("EGGS: {0}\nBOUNCES: {1}\nSECONDS: {2}", 0, 0, 0);
     }
 
     public void RestartGame()
@@ -37,7 +39,4 @@ public class UIEndGame : MonoBehaviour
     {
         Debug.Log("HIGHSCORE");
     }
-
-
-
 }
