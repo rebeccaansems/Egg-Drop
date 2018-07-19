@@ -23,6 +23,7 @@ public class SpawnEgg : MonoBehaviour
         {
             this.GetComponent<Rigidbody2D>().gravityScale = 1;
             GameData.k_AllEggs.Add(this.gameObject);
+            GameData.k_Eggs += 1;
         }
     }
 }

@@ -25,7 +25,8 @@ public class ScoreDino : MonoBehaviour
     {
         if (col.gameObject.tag == "Egg")
         {
-            GameData.k_Score += 1;
+            GameData.k_Score += GameData.k_AllEggs.Count;
+            GameData.k_Bounces += 1;
         }
     }
 }

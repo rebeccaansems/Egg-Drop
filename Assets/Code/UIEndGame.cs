@@ -22,7 +22,7 @@ public class UIEndGame : MonoBehaviour
         this.GetComponent<CanvasGroup>().blocksRaycasts = true;
 
         FinalGameScoreText.text = GameData.k_Score.ToString();
-        MoreGameDataText.text = string.Format("EGGS: {0}\nBOUNCES: {1}", 0, 0);
+        MoreGameDataText.text = string.Format("EGGS: {0}\nBOUNCES: {1}", GameData.k_Eggs, GameData.k_Bounces);
     }
 
     public void RestartGame()

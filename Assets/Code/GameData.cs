@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameData : MonoBehaviour
 {
     public static List<GameObject> k_AllEggs;
-    public static int k_Score = 0;
+    public static int k_Score, k_Bounces, k_Eggs;
     public static bool k_GameRunning = true;
 
     public GameObject EndGamePanel;
@@ -16,6 +16,8 @@ public class GameData : MonoBehaviour
     void Start()
     {
         k_Score = 0;
+        k_Bounces = 0;
+        k_Eggs = 1;
         Time.timeScale = 1;
     }
 
