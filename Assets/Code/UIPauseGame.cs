@@ -26,8 +26,8 @@ public class UIPauseGame : UIPanel
 
     public void ShowStatsPanel()
     {
-        StatsPanel.ShowPanel(this);
         HidePanel();
+        StatsPanel.ShowPanel(this);
     }
 
     public void ChangeSFXVolume(float volume)

@@ -35,7 +35,7 @@ public class UIEndGame : UIPanel
 
     public void ShowStatsPanel()
     {
-        StatsPanel.ShowPanel(this);
         HidePanel();
+        StatsPanel.ShowPanel(this);
     }
 }

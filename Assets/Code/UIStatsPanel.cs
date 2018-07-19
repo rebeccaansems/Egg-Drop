@@ -7,13 +7,13 @@ public class UIStatsPanel : UIPanel
 {
     public Text HighScoreText, StatsText;
 
-    private UIPanel LastPanel;
+    private UIPanel PrvePanel;
 
-    public void ShowPanel(UIPanel lastPanel)
+    public void ShowPanel(UIPanel prevPanel)
     {
         base.ShowPanel();
 
-        LastPanel = lastPanel;
+        PrvePanel = prevPanel;
 
         HighScoreText.text = string.Format("GAME {0}: {1}\nGAME {2}: {3}\nGAME {4}: {5}\n", 0, 0, 0, 0, 0, 0);
         StatsText.text = string.Format("TOTAL EGGS: {0}\nTOTAL BOUNCES: {1}",
@@ -23,8 +23,7 @@ public class UIStatsPanel : UIPanel
 
     public new void HidePanel()
     {
-        LastPanel.ShowPanel();
-
         base.HidePanel();
+        PrvePanel.ShowPanel();
     }
 }
