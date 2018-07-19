@@ -8,13 +8,13 @@ public class ScoreDino : MonoBehaviour
 
     void Start()
     {
-        GameData.k_AllEggs = new List<GameObject>();
-        GameData.k_AllEggs.Add(StarterEgg);
+        GameData.l_AllEggs = new List<GameObject>();
+        GameData.l_AllEggs.Add(StarterEgg);
     }
 
     void Update()
     {
-        if (GameData.k_AllEggs.Count == 0 && this.GetComponent<Animator>().GetBool("IsDead") == false)
+        if (GameData.l_AllEggs.Count == 0 && this.GetComponent<Animator>().GetBool("IsDead") == false)
         {
             this.GetComponent<Animator>().SetBool("IsDead", true);
             GameData.k_GameRunning = false;
@@ -25,7 +25,7 @@ public class ScoreDino : MonoBehaviour
     {
         if (col.gameObject.tag == "Egg")
         {
-            GameData.k_Score += GameData.k_AllEggs.Count;
+            GameData.k_Score += GameData.l_AllEggs.Count;
             GameData.k_Bounces += 1;
         }
     }

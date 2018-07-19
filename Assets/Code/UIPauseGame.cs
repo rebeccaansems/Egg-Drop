@@ -3,26 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIPauseGame : MonoBehaviour {
-
-    public void Start()
-    {
-        HidePanel();
-    }
-
-    public void ShowPanel()
-    {
-        this.GetComponent<CanvasGroup>().alpha = 1;
-        this.GetComponent<CanvasGroup>().interactable = true;
-        this.GetComponent<CanvasGroup>().blocksRaycasts = true;
-    }
-
-    public void HidePanel()
-    {
-        this.GetComponent<CanvasGroup>().alpha = 0;
-        this.GetComponent<CanvasGroup>().interactable = false;
-        this.GetComponent<CanvasGroup>().blocksRaycasts = false;
-    }
+public class UIPauseGame : UIPanel
+{
+    public UIStatsPanel StatsPanel;
 
     public void PauseGame()
     {
@@ -41,9 +24,10 @@ public class UIPauseGame : MonoBehaviour {
         Debug.Log("SHARE");
     }
 
-    public void ShowHighScorePanel()
+    public void ShowStatsPanel()
     {
-        Debug.Log("HIGHSCORE");
+        StatsPanel.ShowPanel(this);
+        HidePanel();
     }
 
     public void ChangeSFXVolume(float volume)

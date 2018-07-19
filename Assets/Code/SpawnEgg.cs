@@ -22,7 +22,7 @@ public class SpawnEgg : MonoBehaviour
         if (col.gameObject.tag == "Egg" && this.GetComponent<Rigidbody2D>().gravityScale == 0)
         {
             this.GetComponent<Rigidbody2D>().gravityScale = 1;
-            GameData.k_AllEggs.Add(this.gameObject);
+            GameData.l_AllEggs.Add(this.gameObject);
             GameData.k_Eggs += 1;
         }
     }

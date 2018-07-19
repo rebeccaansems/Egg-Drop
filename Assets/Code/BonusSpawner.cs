@@ -17,7 +17,7 @@ public class BonusSpawner : MonoBehaviour
         while (GameData.k_GameRunning)
         {
             yield return new WaitForSeconds(Random.Range(MinSpawnTime, MaxSpawnTime));
-            if (GameObject.FindGameObjectsWithTag("Egg").Length == GameData.k_AllEggs.Count && GameData.k_GameRunning)
+            if (GameObject.FindGameObjectsWithTag("Egg").Length == GameData.l_AllEggs.Count && GameData.k_GameRunning)
             {
                 GameObject newEgg = Instantiate(BaseEgg, this.transform);
             }

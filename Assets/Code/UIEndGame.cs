@@ -4,22 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class UIEndGame : MonoBehaviour
+public class UIEndGame : UIPanel
 {
     public Text FinalGameScoreText, MoreGameDataText;
+    public UIStatsPanel StatsPanel;
 
-    public void Start()
+    public new void ShowPanel()
     {
-        this.GetComponent<CanvasGroup>().alpha = 0;
-        this.GetComponent<CanvasGroup>().interactable = false;
-        this.GetComponent<CanvasGroup>().blocksRaycasts = false;
-    }
-
-    public void ShowPanel()
-    {
-        this.GetComponent<CanvasGroup>().alpha = 1;
-        this.GetComponent<CanvasGroup>().interactable = true;
-        this.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        base.ShowPanel();
 
         FinalGameScoreText.text = GameData.k_Score.ToString();
         MoreGameDataText.text = string.Format("EGGS: {0}\nBOUNCES: {1}", GameData.k_Eggs, GameData.k_Bounces);
@@ -27,7 +19,13 @@ public class UIEndGame : MonoBehaviour
 
     public void RestartGame()
     {
+        PlayerPrefs.SetInt("GameData", GameData.k_GameNumber);
+        PlayerPrefs.SetInt("Eggs", GameData.k_EggsAllTime + GameData.k_Eggs);
+        PlayerPrefs.SetInt("Bounces", GameData.k_BouncesAllTime + GameData.k_Bounces);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        GameData.k_GameNumber += 1;
     }
 
     public void ShareTwitter()
@@ -35,8 +33,9 @@ public class UIEndGame : MonoBehaviour
         Debug.Log("SHARE");
     }
 
-    public void ShowHighScorePanel()
+    public void ShowStatsPanel()
     {
-        Debug.Log("HIGHSCORE");
+        StatsPanel.ShowPanel(this);
+        HidePanel();
     }
 }
