@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveParachute : MonoBehaviour
 {
     public Vector3 TargetAngle = new Vector3(0f, 0f, -20f);
+    public string ParentTag;
 
     private Vector3 CurrentAngle;
     private int Speed;
@@ -16,7 +17,7 @@ public class MoveParachute : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (this.transform.parent.tag != "Egg")
+        if (this.transform.parent.tag != ParentTag)
         {
             this.GetComponent<Rigidbody2D>().AddForce(new Vector3(0.8f, 0.8f, 0) * Speed * Time.deltaTime);
 
@@ -35,7 +36,7 @@ public class MoveParachute : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        if (this.transform.parent.tag != "Egg")
+        if (this.transform.parent.tag != ParentTag)
         {
             Destroy(this.gameObject);
         }

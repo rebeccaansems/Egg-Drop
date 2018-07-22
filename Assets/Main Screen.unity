@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 184393704}
   - component: {fileID: 184393705}
   m_Layer: 0
-  m_Name: misc_plant_short
+  m_Name: Cat Tails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1208,7 +1208,7 @@ GameObject:
   - component: {fileID: 302717189}
   - component: {fileID: 302717190}
   m_Layer: 0
-  m_Name: bones_1_on_grass
+  m_Name: Bones Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1387,6 +1387,7 @@ GameObject:
   - component: {fileID: 385783055}
   - component: {fileID: 385783054}
   - component: {fileID: 385783058}
+  - component: {fileID: 385783059}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1470,6 +1471,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EndGamePanel: {fileID: 908193956}
   ScoreText: {fileID: 425667479}
+--- !u!114 &385783059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 385783053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4025388311cfea14a83fcd4d637d4829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnowableObjects:
+  - {fileID: 1979012337}
+  - {fileID: 423481425}
+  - {fileID: 1165797666}
+  - {fileID: 406891454}
+  - {fileID: 984332205}
+  - {fileID: 2040231911}
+  - {fileID: 302717190}
+  - {fileID: 184393705}
+  - {fileID: 1333551373}
+  - {fileID: 811423201}
+  NormalGrass:
+  - {fileID: 21300000, guid: 6fa647766a81d3b47b9d71723eca2dca, type: 3}
+  - {fileID: 21300000, guid: ea078aa2518af0147bd4f70d8c9dca9f, type: 3}
+  - {fileID: 21300000, guid: 4ab4fbe8110831a43873344125965bb2, type: 3}
+  - {fileID: 21300000, guid: 253a08d1c55d7e748bb961e71c3a1474, type: 3}
+  - {fileID: 21300000, guid: 7e3221543b26a9f45a44c91019ca8444, type: 3}
+  - {fileID: 21300000, guid: a6b0d345b445cea4dba6871c02670260, type: 3}
+  - {fileID: 21300000, guid: 163b4b3077a368b47a16601de4e39bc7, type: 3}
+  - {fileID: 21300000, guid: 12b58c62093aef14f8fa0ac34feecc06, type: 3}
+  - {fileID: 21300000, guid: 12b58c62093aef14f8fa0ac34feecc06, type: 3}
+  - {fileID: 21300000, guid: 12b58c62093aef14f8fa0ac34feecc06, type: 3}
+  SnowGrass:
+  - {fileID: 21300000, guid: ff525f4c3c7bbda429ed39223e48d779, type: 3}
+  - {fileID: 21300000, guid: 4da502d200504a742b7cb7c13509fc98, type: 3}
+  - {fileID: 21300000, guid: 76bf2dabf7a48d84da2ef6920d26ac74, type: 3}
+  - {fileID: 21300000, guid: ef770bad3d100d3469248fad81deee4e, type: 3}
+  - {fileID: 21300000, guid: a9c58cc33e62c7a4d8eb8388609ef0a7, type: 3}
+  - {fileID: 21300000, guid: 81ae6c1bdce66ae4689e6e1999c5a8d3, type: 3}
+  - {fileID: 21300000, guid: bd6bd0f604972bf48a8fa61ef8b27d9a, type: 3}
+  - {fileID: 21300000, guid: c573d8a5881e97f4b9337225fa091286, type: 3}
+  - {fileID: 21300000, guid: c573d8a5881e97f4b9337225fa091286, type: 3}
+  - {fileID: 21300000, guid: c573d8a5881e97f4b9337225fa091286, type: 3}
 --- !u!1 &389255651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1584,7 @@ GameObject:
   - component: {fileID: 406891453}
   - component: {fileID: 406891454}
   m_Layer: 0
-  m_Name: grass_tuft_2
+  m_Name: Grass Tuft 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1612,7 +1657,7 @@ GameObject:
   - component: {fileID: 423481424}
   - component: {fileID: 423481425}
   m_Layer: 0
-  m_Name: stone_2_on_rock
+  m_Name: Grass Rock 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2915,7 +2960,7 @@ GameObject:
   - component: {fileID: 811423200}
   - component: {fileID: 811423201}
   m_Layer: 0
-  m_Name: misc_plant_short (2)
+  m_Name: Cat Tails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3577,7 +3622,7 @@ GameObject:
   - component: {fileID: 984332204}
   - component: {fileID: 984332205}
   m_Layer: 0
-  m_Name: fore_ground_grass
+  m_Name: Foreground Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4234,7 +4279,7 @@ GameObject:
   - component: {fileID: 1165797665}
   - component: {fileID: 1165797666}
   m_Layer: 0
-  m_Name: grass_tuft_1
+  m_Name: Grass Tuft 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4307,7 +4352,7 @@ GameObject:
   - component: {fileID: 1333551372}
   - component: {fileID: 1333551373}
   m_Layer: 0
-  m_Name: misc_plant_short (1)
+  m_Name: Cat Tails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5000,10 +5045,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 255743979124159380, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
+    - target: {fileID: 212336484064438406, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
         type: 2}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.42600012
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508540295501142, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
+        type: 2}
+      propertyPath: DropHeightExtrema.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508540295501142, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
+        type: 2}
+      propertyPath: DropHeightExtrema.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
@@ -5139,7 +5194,7 @@ GameObject:
   - component: {fileID: 1701009792}
   - component: {fileID: 1701009793}
   m_Layer: 0
-  m_Name: fore_ground_rocks
+  m_Name: Midground Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5956,7 +6011,7 @@ GameObject:
   - component: {fileID: 1979012336}
   - component: {fileID: 1979012337}
   m_Layer: 0
-  m_Name: stone_3_on_grass
+  m_Name: Grass Rock 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6103,7 +6158,7 @@ GameObject:
   - component: {fileID: 2040231910}
   - component: {fileID: 2040231911}
   m_Layer: 0
-  m_Name: fore_ground_grass_edge
+  m_Name: Midground Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6237,6 +6292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseEgg: {fileID: 1076247778134516, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
+  IceCube: {fileID: 1001870845599054, guid: 0eafc2ec48535a644a21000653fc2cec, type: 2}
   MinSpawnTime: 10
   MaxSpawnTime: 30
   NewEggSpawnLocation: {x: 0, y: 5.75}
