@@ -55,7 +55,11 @@ public class MoveDino : MonoBehaviour
     {
         mousePosition = new Vector3(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
            cameraRect.xMin, cameraRect.xMax), this.transform.position.y, 0);
-        this.transform.position = Vector2.MoveTowards(this.transform.position, mousePosition, MoveSpeed * Time.deltaTime);
+        
+        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < 0) //don't move dino if player is touching the top 1/2 of screen
+        {
+            this.transform.position = Vector2.MoveTowards(this.transform.position, mousePosition, MoveSpeed * Time.deltaTime);
+        }
 
         float speed = (this.transform.position - oldPosition).magnitude / Time.deltaTime;
         this.GetComponent<Animator>().SetFloat("Speed", speed);
