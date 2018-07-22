@@ -13,7 +13,7 @@ public class GameData : MonoBehaviour
     public static int k_Score, k_Bounces, k_Eggs, k_GameNumber;
     public static int k_EggsAllTime, k_BouncesAllTime;
     public static bool k_GameRunning = true, k_ScoresUpdated, k_GravitySlowDown;
-    
+
     public GameObject EndGamePanel;
     public Text ScoreText;
 
@@ -38,6 +38,8 @@ public class GameData : MonoBehaviour
 
         Time.timeScale = 1;
 
+        ScoreText.fontSize = 180;
+
         PlayerPrefs.Save();
     }
 
@@ -52,6 +54,11 @@ public class GameData : MonoBehaviour
         {
             GameData.l_AllEggs.RemoveAll(item => item == null);
             ScoreText.text = k_Score.ToString();
+            if (k_Score > 99 && ScoreText.fontSize != 130)
+            {
+
+                ScoreText.fontSize = 130;
+            }
         }
 
         if (k_GravitySlowDown)
