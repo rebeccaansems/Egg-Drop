@@ -8,6 +8,7 @@ public class MoveParachute : MonoBehaviour
 
     private Vector3 CurrentAngle;
     private int Speed;
+
     void Start()
     {
         Speed = Random.Range(300, 800);

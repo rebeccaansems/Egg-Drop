@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveDino : MonoBehaviour
 {
     public float MoveSpeed = 0.1f;
+    public float MovableZoneUpperLimit = 0;
 
     private Vector3 mousePosition, oldPosition;
     private Vector2[] colliderOffsetLeft, colliderOffsetRight;
@@ -56,7 +57,7 @@ public class MoveDino : MonoBehaviour
         mousePosition = new Vector3(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
            cameraRect.xMin, cameraRect.xMax), this.transform.position.y, 0);
         
-        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < 0) //don't move dino if player is touching the top 1/2 of screen
+        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < MovableZoneUpperLimit)
         {
             this.transform.position = Vector2.MoveTowards(this.transform.position, mousePosition, MoveSpeed * Time.deltaTime);
         }
