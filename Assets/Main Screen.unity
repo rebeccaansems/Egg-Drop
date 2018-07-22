@@ -6293,8 +6293,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BaseEgg: {fileID: 1076247778134516, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
   IceCube: {fileID: 1001870845599054, guid: 0eafc2ec48535a644a21000653fc2cec, type: 2}
-  MinSpawnTime: 10
-  MaxSpawnTime: 30
+  MinSpawnTime: 3
+  MaxSpawnTime: 8
   NewEggSpawnLocation: {x: 0, y: 5.75}
 --- !u!1 &2121949644
 GameObject:

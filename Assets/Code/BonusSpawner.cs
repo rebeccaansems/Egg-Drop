@@ -21,7 +21,7 @@ public class BonusSpawner : MonoBehaviour
             if (GameData.k_GameRunning)
             {
                 int spawnNumber = Random.Range(0, 100);
-                if (spawnNumber > 90)
+                if (spawnNumber > 25)
                 {
                     GameObject iceCube = Instantiate(IceCube, this.transform);
                     iceCube.transform.position = new Vector2(Random.Range(NewEggSpawnLocation.x - 0.5f, NewEggSpawnLocation.x + 1.5f), NewEggSpawnLocation.y);

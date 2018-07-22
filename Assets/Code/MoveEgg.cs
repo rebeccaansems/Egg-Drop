@@ -8,9 +8,9 @@ public class MoveEgg : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (this.GetComponent<Rigidbody2D>().velocity.magnitude > MaxSpeed)
+        if (this.GetComponent<Rigidbody2D>().velocity.magnitude > (MaxSpeed * GameData.k_SpeedAdjustment))
         {
-            this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity.normalized * MaxSpeed;
+            this.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity.normalized * (MaxSpeed * GameData.k_SpeedAdjustment);
         }
     }
 
