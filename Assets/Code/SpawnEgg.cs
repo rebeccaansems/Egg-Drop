@@ -4,26 +4,47 @@ using UnityEngine;
 
 public class SpawnEgg : MonoBehaviour
 {
-    public Sprite[] AllEggs;
-    public bool isDefaultEgg;
+    public GameObject Parachute;
+    public Sprite[] AllEggs, AllParachutes;
+    public Vector2 DropHeightExtrema;
+
+    private bool ParachuteHooked;
+    private float DropHeight;
 
     void Start()
     {
+        ParachuteHooked = true;
         this.GetComponent<SpriteRenderer>().sprite = AllEggs[Random.Range(0, AllEggs.Length - 1)];
 
-        if (isDefaultEgg == false)
+        Parachute.GetComponent<SpriteRenderer>().sprite = AllParachutes[Random.Range(0, AllParachutes.Length - 1)];
+        this.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 25));
+        DropHeight = Random.Range(DropHeightExtrema.x, DropHeightExtrema.y);
+    }
+
+    void Update()
+    {
+        if (this.transform.position.y < DropHeight && Parachute != null && ParachuteHooked)
         {
-            this.GetComponent<Rigidbody2D>().gravityScale = 0;
+            ReleaseEgg();
         }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Egg" && this.GetComponent<Rigidbody2D>().gravityScale == 0)
+        if (col.gameObject.tag == "Egg" && Parachute != null && ParachuteHooked)
         {
-            this.GetComponent<Rigidbody2D>().gravityScale = 1;
-            GameData.l_AllEggs.Add(this.gameObject);
-            GameData.k_Eggs += 1;
+            ReleaseEgg();
         }
+    }
+
+    void ReleaseEgg()
+    {
+        Parachute.transform.parent = this.transform.parent;
+        Destroy(this.GetComponent<FixedJoint2D>());
+
+        GameData.l_AllEggs.Add(this.gameObject);
+        GameData.k_Eggs += 1;
+
+        ParachuteHooked = false;
     }
 }

@@ -16,6 +16,9 @@ public class MoveEgg : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        Destroy(this.gameObject);
+        if (this.transform.position.y < 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

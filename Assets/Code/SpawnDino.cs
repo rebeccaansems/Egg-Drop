@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnDino : MonoBehaviour
 {
-
     public int NumDinoColors = 3;
 
     void Start()

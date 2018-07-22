@@ -22,10 +22,11 @@ public class GameData : MonoBehaviour
         k_ScoresUpdated = false;
         k_Score = 0;
         k_Bounces = 0;
-        k_Eggs = 1;
+        k_Eggs = 0;
         k_GameNumber = PlayerPrefs.GetInt("GameNumber", 1);
         k_BouncesAllTime = PlayerPrefs.GetInt("Bounces", 0);
         k_EggsAllTime = PlayerPrefs.GetInt("Eggs", 0);
+        l_AllEggs = new List<GameObject>();
 
         l_HighScores = new List<Tuple<int, int>>();
         l_HighScores.Add(new Tuple<int, int>(PlayerPrefs.GetInt("Highscore_Date0", 0), PlayerPrefs.GetInt("Highscore_Score0", 0)));
