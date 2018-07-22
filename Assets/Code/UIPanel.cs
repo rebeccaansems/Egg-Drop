@@ -14,6 +14,7 @@ public class UIPanel : MonoBehaviour
 
     public void ShowPanel()
     {
+        Time.timeScale = 0;
         PauseButton.interactable = false;
 
         this.GetComponent<CanvasGroup>().alpha = 1;
@@ -23,6 +24,7 @@ public class UIPanel : MonoBehaviour
 
     public void HidePanel()
     {
+        Time.timeScale = 1;
         PauseButton.interactable = true;
 
         this.GetComponent<CanvasGroup>().alpha = 0;

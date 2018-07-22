@@ -7,18 +7,6 @@ public class UIPauseGame : UIPanel
 {
     public UIStatsPanel StatsPanel;
 
-    public void PauseGame()
-    {
-        ShowPanel();
-        Time.timeScale = 0;
-    }
-
-    public void UnpauseGame()
-    {
-        HidePanel();
-        Time.timeScale = 1;
-    }
-
     public void ShareTwitter()
     {
         Debug.Log("SHARE");
