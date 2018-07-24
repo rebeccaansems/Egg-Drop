@@ -8,9 +8,13 @@ public class BonusSpawner : MonoBehaviour
     public int MinSpawnTime, MaxSpawnTime;
     public Vector2 NewEggSpawnLocation;
 
+    public int PercentSpawnChanceIce = 10;
+
     void Start()
     {
         StartCoroutine(SpawnNewEgg());
+
+        PercentSpawnChanceIce = 100 - PercentSpawnChanceIce;
     }
 
     IEnumerator SpawnNewEgg()
@@ -21,7 +25,7 @@ public class BonusSpawner : MonoBehaviour
             if (GameData.k_GameRunning)
             {
                 int spawnNumber = Random.Range(0, 100);
-                if (spawnNumber > 25)
+                if (spawnNumber > PercentSpawnChanceIce)
                 {
                     GameObject iceCube = Instantiate(IceCube, this.transform);
                     iceCube.transform.position = new Vector2(Random.Range(NewEggSpawnLocation.x - 0.5f, NewEggSpawnLocation.x + 1.5f), NewEggSpawnLocation.y);

@@ -56,10 +56,6 @@ public class GameData : MonoBehaviour
         {
             GameData.l_AllEggs.RemoveAll(item => item == null);
             ScoreText.text = k_Score.ToString();
-            if (k_Score > 99 && ScoreText.fontSize != 130)
-            {
-                ScoreText.fontSize = 130;
-            }
         }
 
         if (k_GravitySlowDown)

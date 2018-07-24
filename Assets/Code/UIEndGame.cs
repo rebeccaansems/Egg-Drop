@@ -12,14 +12,19 @@ public class UIEndGame : UIPanel
 
     public new void ShowPanel()
     {
-        base.ShowPanel();
-
-        FinalGameScoreText.text = GameData.k_Score.ToString();
-        MoreGameDataText.text = string.Format("EGGS: {0}\nBOUNCES: {1}", GameData.k_Eggs, GameData.k_Bounces);
-
         if (GameData.k_ScoresUpdated == false)
         {
+            base.ShowPanel();
+
             UpdateGameStats();
+
+            FinalGameScoreText.text = GameData.k_Score.ToString();
+            if (IsHighscore())
+            {
+                FinalGameScoreText.text = "~" + FinalGameScoreText.text + "~";
+            }
+
+            MoreGameDataText.text = string.Format("EGGS: {0}\nBOUNCES: {1}", GameData.k_Eggs, GameData.k_Bounces);
         }
     }
 
@@ -50,6 +55,7 @@ public class UIEndGame : UIPanel
 
         GameData.l_HighScores.Add(new Tuple<int, int>(GameData.k_GameNumber, GameData.k_Score));
         GameData.l_HighScores.Sort((x, y) => y.Second.CompareTo(x.Second));
+        GameData.l_HighScores.RemoveAt(3);
 
         PlayerPrefs.SetInt("Highscore_Date0", GameData.l_HighScores[0].First);
         PlayerPrefs.SetInt("Highscore_Date1", GameData.l_HighScores[1].First);
@@ -60,4 +66,8 @@ public class UIEndGame : UIPanel
         PlayerPrefs.SetInt("Highscore_Score2", GameData.l_HighScores[2].Second);
     }
 
+    private bool IsHighscore()
+    {
+        return GameData.l_HighScores.Count(x => x.First == GameData.k_GameNumber) == 1;
+    }
 }
