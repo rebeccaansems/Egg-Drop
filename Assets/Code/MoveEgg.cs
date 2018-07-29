@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveEgg : MonoBehaviour
 {
-    public float MaxSpeed = 200f;
+    public float MaxSpeed = 15f;
 
     void FixedUpdate()
     {

@@ -16,6 +16,7 @@ public class GameData : MonoBehaviour
     public static float k_SpeedAdjustment;
 
     public GameObject EndGamePanel;
+    public ParticleSystem SnowMachine;
     public Text ScoreText;
 
     void Start()
@@ -74,12 +75,14 @@ public class GameData : MonoBehaviour
 
     public IEnumerator SlowDownGravity(int slowRate)
     {
-        this.GetComponent<SnowOver>().Snow();
+        SnowMachine.Play();
         Physics2D.gravity = Physics2D.gravity / slowRate;
-        k_SpeedAdjustment = k_SpeedAdjustment / 2;
-        yield return new WaitForSeconds(10);
+        k_SpeedAdjustment = k_SpeedAdjustment / (slowRate / 2);
+        this.GetComponent<SnowOver>().Snow();
+
+        yield return new WaitForSeconds(10f);
         this.GetComponent<SnowOver>().Thaw();
         Physics2D.gravity = Physics2D.gravity * slowRate;
-        k_SpeedAdjustment = k_SpeedAdjustment * 2;
+        k_SpeedAdjustment = k_SpeedAdjustment * (slowRate / 2);
     }
 }

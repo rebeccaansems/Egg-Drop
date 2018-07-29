@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class SnowOver : MonoBehaviour
 {
-    public SpriteRenderer[] SnowableObjects;
-    public Sprite[] NormalGrass, SnowGrass;
+    public Animator[] SnowableAnim;
 
     public void Snow()
     {
-        for (int i = 0; i < SnowableObjects.Length; i++)
+        foreach(Animator anim in SnowableAnim)
         {
-            SnowableObjects[i].sprite = SnowGrass[i];
+            anim.SetBool("isSnow", true);
         }
     }
 
     public void Thaw()
     {
-        for (int i = 0; i < SnowableObjects.Length; i++)
+        foreach (Animator anim in SnowableAnim)
         {
-            SnowableObjects[i].sprite = NormalGrass[i];
+            anim.SetBool("isSnow", false);
         }
     }
 }
