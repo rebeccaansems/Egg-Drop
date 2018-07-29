@@ -1654,6 +1654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndGamePanel: {fileID: 908193956}
+  BonusSpawner: {fileID: 2084860469}
   SnowMachine: {fileID: 1122416460}
   ScoreText: {fileID: 425667479}
 --- !u!114 &385783059
@@ -10633,10 +10634,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BaseEgg: {fileID: 1076247778134516, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
   IceCube: {fileID: 1001870845599054, guid: 0eafc2ec48535a644a21000653fc2cec, type: 2}
-  MinSpawnTime: 10
-  MaxSpawnTime: 10
+  Bird: {fileID: 1242876906027244, guid: f14a848c798ff904eaaec6f609042b6d, type: 2}
+  MinSpawnTime: 15
+  MaxSpawnTime: 30
   NewEggSpawnLocation: {x: 0, y: 5.75}
-  PercentSpawnChanceIce: 90
+  PercentSpawnChanceIce: 10
+  PercentSpawnChanceRain: 5
 --- !u!1 &2121949644
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,10 +12,11 @@ public class GameData : MonoBehaviour
 
     public static int k_Score, k_Bounces, k_Eggs, k_GameNumber;
     public static int k_EggsAllTime, k_BouncesAllTime;
-    public static bool k_GameRunning = true, k_ScoresUpdated, k_GravitySlowDown;
+    public static bool k_GameRunning = true, k_ScoresUpdated, k_GravitySlowDown, k_EggRain;
     public static float k_SpeedAdjustment;
 
     public GameObject EndGamePanel;
+    public BonusSpawner BonusSpawner;
     public ParticleSystem SnowMachine;
     public Text ScoreText;
 
@@ -23,6 +24,7 @@ public class GameData : MonoBehaviour
     {
         k_ScoresUpdated = false;
         k_GravitySlowDown = false;
+        k_EggRain = false;
         k_Score = 0;
         k_Bounces = 0;
         k_Eggs = 0;
@@ -63,6 +65,12 @@ public class GameData : MonoBehaviour
         {
             StartCoroutine(SlowDownGravity(4));
             k_GravitySlowDown = false;
+        }
+
+        if (k_EggRain)
+        {
+            BonusSpawner.RainEggs();
+            k_EggRain = false;
         }
     }
 
