@@ -8,6 +8,7 @@ public class MovePowerup : MonoBehaviour
     {
         if (this.transform.position.y < 0)
         {
+            this.transform.DetachChildren();
             Destroy(this.gameObject);
         }
     }

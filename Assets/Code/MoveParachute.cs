@@ -17,7 +17,7 @@ public class MoveParachute : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (this.transform.parent.tag != ParentTag)
+        if (this.transform.parent != null && this.transform.parent.tag != ParentTag)
         {
             this.GetComponent<Rigidbody2D>().AddForce(new Vector3(0.8f, 0.8f, 0) * Speed * Time.deltaTime);
 
@@ -36,7 +36,7 @@ public class MoveParachute : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        if (this.transform.parent.tag != ParentTag)
+        if (this.transform.parent != null && this.transform.parent.tag != ParentTag)
         {
             Destroy(this.gameObject);
         }
