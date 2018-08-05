@@ -14,9 +14,8 @@ public class BonusSpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnNewEgg());
-
-        PercentSpawnChanceIce = 100 - PercentSpawnChanceIce;
-        PercentSpawnChanceRain = 100 - PercentSpawnChanceRain - PercentSpawnChanceIce;
+        
+        PercentSpawnChanceRain = PercentSpawnChanceRain + PercentSpawnChanceIce;
     }
 
     IEnumerator SpawnNewEgg()
@@ -27,13 +26,13 @@ public class BonusSpawner : MonoBehaviour
             if (GameData.k_GameRunning)
             {
                 int spawnNumber = Random.Range(0, 100);
-                if (spawnNumber > PercentSpawnChanceIce && LastSpawnEgg)
+                if (spawnNumber < PercentSpawnChanceIce && LastSpawnEgg)
                 {
                     GameObject iceCube = Instantiate(IceCube, this.transform);
                     iceCube.transform.position = new Vector2(Random.Range(NewEggSpawnLocation.x - 0.5f, NewEggSpawnLocation.x + 1.5f), NewEggSpawnLocation.y);
                     LastSpawnEgg = false;
                 }
-                else if (spawnNumber > PercentSpawnChanceRain && LastSpawnEgg)
+                else if (spawnNumber < PercentSpawnChanceRain && LastSpawnEgg)
                 {
                     GameObject bird = Instantiate(Bird, this.transform);
                     bird.transform.position = new Vector2(Random.Range(NewEggSpawnLocation.x - 0.5f, NewEggSpawnLocation.x + 1.5f), NewEggSpawnLocation.y);
