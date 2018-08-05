@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class UIPanel : MonoBehaviour
 {
     public Button PauseButton;
+    public Countdown CountdownTimer;
 
     public void Start()
     {
-        HidePanel();
+        HidePanel(true);
     }
 
     public void ShowPanel()
@@ -24,11 +25,23 @@ public class UIPanel : MonoBehaviour
 
     public void HidePanel()
     {
-        Time.timeScale = 1;
-        PauseButton.interactable = true;
+        HidePanel(false);
+    }
 
+    public void HidePanel(bool hideTimer)
+    {
         this.GetComponent<CanvasGroup>().alpha = 0;
         this.GetComponent<CanvasGroup>().interactable = false;
         this.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+        if (CountdownTimer != null && hideTimer == false)
+        {
+            StartCoroutine(CountdownTimer.StartCountdown(PauseButton));
+        }
+        else
+        {
+            Time.timeScale = 1;
+            PauseButton.interactable = true;
+        }
     }
 }
