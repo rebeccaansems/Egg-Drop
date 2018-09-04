@@ -28,12 +28,15 @@ public class Countdown : MonoBehaviour {
         Show();
         Time.timeScale = 0;
         CountdownText.text = "3";
+        this.GetComponent<PlayAudio>().Play(1);
         yield return new WaitForSecondsRealtime(1);
 
         CountdownText.text = "2";
+        this.GetComponent<PlayAudio>().Play(1);
         yield return new WaitForSecondsRealtime(1);
 
         CountdownText.text = "1";
+        this.GetComponent<PlayAudio>().Play(1);
         yield return new WaitForSecondsRealtime(1);
 
         CountdownText.text = "";
