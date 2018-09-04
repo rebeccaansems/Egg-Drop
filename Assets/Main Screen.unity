@@ -10887,7 +10887,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4871966505955722, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 4871966505955722, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10921,17 +10921,22 @@ Prefab:
     - target: {fileID: 114508540295501142, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
         type: 2}
       propertyPath: DropHeightExtrema.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114508540295501142, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
         type: 2}
       propertyPath: DropHeightExtrema.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114440969185436780, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
         type: 2}
       propertyPath: MinSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50603674045633350, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
@@ -11614,7 +11619,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1790947060}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
