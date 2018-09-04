@@ -14,7 +14,7 @@ public class UIPauseGame : UIPanel
 
     public void ShowStatsPanel()
     {
-        HidePanel();
+        HidePanel(true);
         StatsPanel.ShowPanel(this);
     }
 

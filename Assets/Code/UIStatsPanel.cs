@@ -27,7 +27,7 @@ public class UIStatsPanel : UIPanel
 
     public new void HidePanel()
     {
-        base.HidePanel();
+        base.HidePanel(true);
         PrvePanel.ShowPanel();
     }
 }
