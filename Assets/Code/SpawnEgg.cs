@@ -42,6 +42,8 @@ public class SpawnEgg : MonoBehaviour
         Parachute.transform.parent = this.transform.parent;
         Destroy(this.GetComponent<FixedJoint2D>());
 
+        this.GetComponents<PlayAudio>()[1].PlayRandom();
+
         GameData.l_AllEggs.Add(this.gameObject);
         GameData.k_Eggs += 1;
 

@@ -6,6 +6,15 @@ using UnityEngine.UI;
 public class UIPauseGame : UIPanel
 {
     public UIStatsPanel StatsPanel;
+    public Slider SfxSlider, MusicSlider;
+
+    public new void ShowPanel()
+    {
+        base.ShowPanel();
+
+        SfxSlider.value = GameData.k_VolumeSFX;
+        MusicSlider.value = GameData.k_VolumeMusic;
+    }
 
     public void ShareTwitter()
     {
@@ -20,11 +29,13 @@ public class UIPauseGame : UIPanel
 
     public void ChangeSFXVolume(float volume)
     {
-        Debug.Log(volume);
+        GameData.k_VolumeSFX = volume;
+        PlayerPrefs.SetFloat("SFX", GameData.k_VolumeSFX);
     }
 
     public void ChangeMusicVolume(float volume)
     {
-        Debug.Log(volume);
+        GameData.k_VolumeMusic = volume;
+        PlayerPrefs.SetFloat("Music", GameData.k_VolumeMusic);
     }
 }

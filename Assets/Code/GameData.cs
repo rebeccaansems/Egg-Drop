@@ -15,6 +15,8 @@ public class GameData : MonoBehaviour
     public static bool k_GameRunning = true, k_ScoresUpdated, k_GravitySlowDown, k_EggRain;
     public static float k_SpeedAdjustment;
 
+    public static float k_VolumeSFX, k_VolumeMusic;
+
     public GameObject EndGamePanel;
     public BonusSpawner BonusSpawner;
     public ParticleSystem SnowMachine;
@@ -33,6 +35,9 @@ public class GameData : MonoBehaviour
         k_BouncesAllTime = PlayerPrefs.GetInt("Bounces", 0);
         k_EggsAllTime = PlayerPrefs.GetInt("Eggs", 0);
         l_AllEggs = new List<GameObject>();
+
+        k_VolumeSFX = PlayerPrefs.GetFloat("SFX", 0);
+        k_VolumeMusic = PlayerPrefs.GetFloat("Music", 0);
 
         Physics2D.gravity = new Vector2(0, -9.8f);
 

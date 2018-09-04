@@ -11649,6 +11649,8 @@ MonoBehaviour:
   PauseButton: {fileID: 130445570}
   CountdownTimer: {fileID: 385783060}
   StatsPanel: {fileID: 1478697399}
+  SfxSlider: {fileID: 219201731}
+  MusicSlider: {fileID: 1421370797}
 --- !u!1 &1833116538
 GameObject:
   m_ObjectHideFlags: 0
