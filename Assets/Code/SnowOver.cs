@@ -12,6 +12,7 @@ public class SnowOver : MonoBehaviour
         {
             anim.SetBool("isSnow", true);
         }
+        this.GetComponent<PlayAudio>().Play();
     }
 
     public void Thaw()

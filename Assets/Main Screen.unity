@@ -1805,6 +1805,7 @@ GameObject:
   - component: {fileID: 385783058}
   - component: {fileID: 385783059}
   - component: {fileID: 385783060}
+  - component: {fileID: 385783061}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1930,6 +1931,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CountdownText: {fileID: 1016246604}
   CountdownPanel: {fileID: 30710704}
+--- !u!114 &385783061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 385783053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be0569431eea1f4ba7c521aa4332981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: acf1745d4e784014d86bc25ba9323718, type: 3}
 --- !u!1 &389255651
 GameObject:
   m_ObjectHideFlags: 0
