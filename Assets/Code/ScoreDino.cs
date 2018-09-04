@@ -10,6 +10,7 @@ public class ScoreDino : MonoBehaviour
     {
         if (GameData.l_AllEggs.Count == 0 && this.GetComponent<Animator>().GetBool("IsDead") == false && StarterEgg == null)
         {
+            this.GetComponents<PlayAudio>()[0].PlayRandom();
             this.GetComponent<Animator>().SetBool("IsDead", true);
             Destroy(this.GetComponents<CapsuleCollider2D>()[0]);
             Destroy(this.GetComponents<CapsuleCollider2D>()[1]);

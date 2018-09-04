@@ -8,15 +8,15 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1943430824950708}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1943430824950708
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4115698372676956}
   - component: {fileID: 95846200703222110}
@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114732700460093516}
   - component: {fileID: 114630497304295316}
   - component: {fileID: 114813475022639200}
+  - component: {fileID: 114953062215603570}
   m_Layer: 8
   m_Name: Dino
   m_TagString: Player
@@ -36,7 +37,7 @@ GameObject:
 --- !u!4 &4115698372676956
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943430824950708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -49,7 +50,7 @@ Transform:
 --- !u!70 &70288068208872892
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943430824950708}
   m_Enabled: 1
@@ -64,7 +65,7 @@ CapsuleCollider2D:
 --- !u!70 &70656138803625624
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943430824950708}
   m_Enabled: 1
@@ -80,7 +81,7 @@ CapsuleCollider2D:
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943430824950708}
   m_Enabled: 1
@@ -93,10 +94,11 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114630497304295316
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943430824950708}
   m_Enabled: 1
@@ -108,7 +110,7 @@ MonoBehaviour:
 --- !u!114 &114732700460093516
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943430824950708}
   m_Enabled: 1
@@ -121,7 +123,7 @@ MonoBehaviour:
 --- !u!114 &114813475022639200
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943430824950708}
   m_Enabled: 1
@@ -130,10 +132,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StarterEgg: {fileID: 0}
+--- !u!114 &114953062215603570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1943430824950708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be0569431eea1f4ba7c521aa4332981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: 41cc35ea9975d8d448add1f597f50cc8, type: 3}
+  - {fileID: 8300000, guid: 3d68a11ad4d0ee04f99d8b83ff176eb3, type: 3}
 --- !u!212 &212549474471373896
 SpriteRenderer:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943430824950708}
   m_Enabled: 1
@@ -143,6 +159,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -174,3 +191,4 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
