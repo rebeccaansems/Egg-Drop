@@ -2274,6 +2274,11 @@ Prefab:
       propertyPath: StarterEgg
       value: 
       objectReference: {fileID: 425071707}
+    - target: {fileID: 114630497304295316, guid: 4699f28ec1e11c448a6c5b92fce5ad1a,
+        type: 2}
+      propertyPath: NumDinoColors
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4699f28ec1e11c448a6c5b92fce5ad1a, type: 2}
   m_IsPrefabAsset: 0
