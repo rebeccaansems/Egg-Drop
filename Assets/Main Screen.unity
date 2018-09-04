@@ -4232,7 +4232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0.29411766, g: 0.2509804, b: 0.078431375, a: 1}
-  m_EffectDistance: {x: 8, y: 8}
+  m_EffectDistance: {x: 4, y: 4}
   m_UseGraphicAlpha: 0
 --- !u!114 &936863582
 MonoBehaviour:
@@ -10757,7 +10757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0.29411766, g: 0.2509804, b: 0.078431375, a: 1}
-  m_EffectDistance: {x: 8, y: 8}
+  m_EffectDistance: {x: 4, y: 4}
   m_UseGraphicAlpha: 0
 --- !u!114 &1535454577
 MonoBehaviour:
@@ -11614,7 +11614,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1790947060}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
