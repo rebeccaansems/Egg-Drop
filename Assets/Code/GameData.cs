@@ -22,6 +22,8 @@ public class GameData : MonoBehaviour
     public ParticleSystem SnowMachine;
     public Text ScoreText;
 
+    public AudioSource UIAudio;
+
     void Start()
     {
         k_ScoresUpdated = false;
@@ -38,6 +40,8 @@ public class GameData : MonoBehaviour
 
         k_VolumeSFX = PlayerPrefs.GetFloat("SFX", 0);
         k_VolumeMusic = PlayerPrefs.GetFloat("Music", 0);
+
+        UIAudio.volume = k_VolumeSFX;
 
         Physics2D.gravity = new Vector2(0, -9.8f);
 

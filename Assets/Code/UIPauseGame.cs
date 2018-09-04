@@ -7,6 +7,7 @@ public class UIPauseGame : UIPanel
 {
     public UIStatsPanel StatsPanel;
     public Slider SfxSlider, MusicSlider;
+    public AudioSource UIAudio;
 
     public new void ShowPanel()
     {
@@ -31,6 +32,7 @@ public class UIPauseGame : UIPanel
     {
         GameData.k_VolumeSFX = volume;
         PlayerPrefs.SetFloat("SFX", GameData.k_VolumeSFX);
+        UIAudio.volume = GameData.k_VolumeSFX;
     }
 
     public void ChangeMusicVolume(float volume)
