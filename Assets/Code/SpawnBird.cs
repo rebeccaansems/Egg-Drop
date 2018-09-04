@@ -33,6 +33,7 @@ public class SpawnBird : MonoBehaviour
 
     public void DisconnectParachute()
     {
+        this.GetComponent<PlayAudio>().PlayRandom();
         Parachute.transform.parent = this.transform.parent;
         Destroy(this.GetComponent<FixedJoint2D>());
         Destroy(this.GetComponent<CircleCollider2D>());
