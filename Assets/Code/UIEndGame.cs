@@ -17,6 +17,7 @@ public class UIEndGame : UIPanel
             base.ShowPanel();
 
             UpdateGameStats();
+            this.GetComponent<PlayAudio>().PlayRandom(0, 3);
 
             FinalGameScoreText.text = GameData.k_Score.ToString();
             if (IsHighscore())

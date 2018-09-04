@@ -38,8 +38,8 @@ public class GameData : MonoBehaviour
         k_EggsAllTime = PlayerPrefs.GetInt("Eggs", 0);
         l_AllEggs = new List<GameObject>();
 
-        k_VolumeSFX = PlayerPrefs.GetFloat("SFX", 0);
-        k_VolumeMusic = PlayerPrefs.GetFloat("Music", 0);
+        k_VolumeSFX = PlayerPrefs.GetFloat("SFX", 0.5f);
+        k_VolumeMusic = PlayerPrefs.GetFloat("Music", 0.25f);
 
         UIAudio.volume = k_VolumeSFX;
 
