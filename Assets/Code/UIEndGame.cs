@@ -34,11 +34,6 @@ public class UIEndGame : UIPanel
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void ShareTwitter()
-    {
-        Debug.Log("SHARE");
-    }
-
     public void ShowStatsPanel()
     {
         HidePanel(true);

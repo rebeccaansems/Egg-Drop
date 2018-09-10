@@ -17,11 +17,6 @@ public class UIPauseGame : UIPanel
         MusicSlider.value = GameData.k_VolumeMusic;
     }
 
-    public void ShareTwitter()
-    {
-        Debug.Log("SHARE");
-    }
-
     public void ShowStatsPanel()
     {
         HidePanel(true);
