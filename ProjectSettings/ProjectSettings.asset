@@ -620,9 +620,9 @@ PlayerSettings:
   cloudServicesEnabled: {}
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: 7b4e91ba-0a2d-4464-ad34-34d55bb6f6aa
+  projectName: Egg-Drop
+  organizationId: rebecca-2351209
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
