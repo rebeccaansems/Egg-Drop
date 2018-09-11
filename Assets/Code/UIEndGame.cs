@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 
 public class UIEndGame : UIPanel
 {
@@ -15,6 +16,11 @@ public class UIEndGame : UIPanel
         if (GameData.k_ScoresUpdated == false)
         {
             base.ShowPanel();
+
+            if (GameData.k_GameInSessionNumber % 4 == 0 && GameData.k_GameInSessionNumber != 0)
+            {
+                Advertisement.Show();
+            }
 
             UpdateGameStats();
             this.GetComponent<PlayAudio>().PlayRandom(0, 3);
@@ -44,6 +50,7 @@ public class UIEndGame : UIPanel
     {
         GameData.k_ScoresUpdated = true;
         GameData.k_GameNumber += 1;
+        GameData.k_GameInSessionNumber += 1;
 
         PlayerPrefs.SetInt("GameNumber", GameData.k_GameNumber);
         PlayerPrefs.SetInt("Eggs", GameData.k_EggsAllTime + GameData.k_Eggs);

@@ -10,7 +10,7 @@ public class GameData : MonoBehaviour
 
     public static List<GameObject> l_AllEggs;
 
-    public static int k_Score, k_Bounces, k_Eggs, k_GameNumber;
+    public static int k_Score, k_Bounces, k_Eggs, k_GameNumber, k_GameInSessionNumber;
     public static int k_EggsAllTime, k_BouncesAllTime;
     public static bool k_GameRunning = true, k_ScoresUpdated, k_GravitySlowDown, k_EggRain;
     public static float k_SpeedAdjustment;
@@ -33,6 +33,7 @@ public class GameData : MonoBehaviour
         k_Bounces = 0;
         k_Eggs = 0;
         k_SpeedAdjustment = 1;
+        k_GameInSessionNumber = 0;
         k_GameNumber = PlayerPrefs.GetInt("GameNumber", 1);
         k_BouncesAllTime = PlayerPrefs.GetInt("Bounces", 0);
         k_EggsAllTime = PlayerPrefs.GetInt("Eggs", 0);
