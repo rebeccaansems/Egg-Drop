@@ -33,7 +33,6 @@ public class GameData : MonoBehaviour
         k_Bounces = 0;
         k_Eggs = 0;
         k_SpeedAdjustment = 1;
-        k_GameInSessionNumber = 0;
         k_GameNumber = PlayerPrefs.GetInt("GameNumber", 1);
         k_BouncesAllTime = PlayerPrefs.GetInt("Bounces", 0);
         k_EggsAllTime = PlayerPrefs.GetInt("Eggs", 0);
