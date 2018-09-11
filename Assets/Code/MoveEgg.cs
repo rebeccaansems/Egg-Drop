@@ -25,7 +25,10 @@ public class MoveEgg : MonoBehaviour
 
     void OnBecameVisible()
     {
-        this.GetComponents<PlayAudio>()[2].PlayRandom();
+        if (Time.deltaTime != 0)
+        {
+            this.GetComponents<PlayAudio>()[2].PlayRandom();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

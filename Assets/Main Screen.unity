@@ -11843,6 +11843,25 @@ Prefab:
       propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 82751529591026836, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076247778134516, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82751529591026836, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82751529591026836, guid: b68b6ec42a8b9dc4ca839ced21867e2e,
+        type: 2}
+      propertyPath: MinDistance
+      value: 1.07587
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68b6ec42a8b9dc4ca839ced21867e2e, type: 2}
   m_IsPrefabAsset: 0
