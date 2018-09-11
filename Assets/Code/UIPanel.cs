@@ -43,7 +43,7 @@ public class UIPanel : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
             PauseButton.interactable = true;
         }
     }

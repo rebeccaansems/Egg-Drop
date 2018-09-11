@@ -50,8 +50,6 @@ public class GameData : MonoBehaviour
         l_HighScores.Add(new Tuple<int, int>(PlayerPrefs.GetInt("Highscore_Date1", 0), PlayerPrefs.GetInt("Highscore_Score1", 0)));
         l_HighScores.Add(new Tuple<int, int>(PlayerPrefs.GetInt("Highscore_Date2", 0), PlayerPrefs.GetInt("Highscore_Score2", 0)));
 
-        Time.timeScale = 1;
-
         ScoreText.fontSize = 180;
 
         PlayerPrefs.Save();
