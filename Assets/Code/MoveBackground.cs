@@ -10,16 +10,19 @@ public class MoveBackground : MonoBehaviour
     {
         Speed = Random.Range(0.1F, 0.5f);
     }
-    
+
     void Update()
     {
         this.transform.position = new Vector2(this.transform.position.x + Speed * Time.deltaTime,
             this.transform.position.y);
     }
 
-    void OnInvisible()
+    void OnBecameInvisible()
     {
-        this.transform.position = new Vector2(-8f, this.transform.position.y);
-        Speed = Random.Range(0.1F, 0.5f);
+        if (this.transform.position.x > 0)
+        {
+            this.transform.position = new Vector2(-8f, this.transform.position.y);
+            Speed = Random.Range(0.1F, 0.5f);
+        }
     }
 }

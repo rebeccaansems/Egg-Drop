@@ -16,8 +16,7 @@ public class UIEndGame : UIPanel
         if (GameData.k_ScoresUpdated == false)
         {
             base.ShowPanel();
-
-            Debug.Log(GameData.k_GameInSessionNumber);
+            
             if (GameData.k_GameInSessionNumber % 4 == 0 && GameData.k_GameInSessionNumber != 0)
             {
                 Advertisement.Show();
