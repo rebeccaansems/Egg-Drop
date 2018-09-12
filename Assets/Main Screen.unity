@@ -1151,7 +1151,7 @@ RectTransform:
   m_Children:
   - {fileID: 30710703}
   m_Father: {fileID: 461204110}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2629,10 +2629,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1334342399}
   - {fileID: 742556942}
   - {fileID: 816967476}
   - {fileID: 207273748}
-  - {fileID: 1334342399}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3657,7 +3657,7 @@ RectTransform:
   - {fileID: 118679209}
   - {fileID: 130445569}
   m_Father: {fileID: 461204110}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -4076,7 +4076,7 @@ RectTransform:
   - {fileID: 1790947061}
   - {fileID: 1478697398}
   m_Father: {fileID: 461204110}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5383,7 +5383,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: bc9a6006eb19c784f869590cccd896b4, type: 3}
+    m_Font: {fileID: 12800000, guid: ad15771b9e460734fb4f1bc11b7cb19e, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -10852,7 +10852,7 @@ RectTransform:
   m_Children:
   - {fileID: 274557563}
   m_Father: {fileID: 461204110}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10938,12 +10938,12 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 793008747
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1334342405
 MonoBehaviour:
