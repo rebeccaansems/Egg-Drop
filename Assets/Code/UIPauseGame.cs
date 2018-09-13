@@ -8,6 +8,7 @@ public class UIPauseGame : UIPanel
     public UIStatsPanel StatsPanel;
     public Slider SfxSlider, MusicSlider;
     public AudioSource UIAudio;
+    public CanvasGroup MainScreen;
 
     public new void ShowPanel()
     {
@@ -34,5 +35,13 @@ public class UIPauseGame : UIPanel
     {
         GameData.k_VolumeMusic = volume;
         PlayerPrefs.SetFloat("Music", GameData.k_VolumeMusic);
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause == false && MainScreen.alpha == 0)
+        {
+            ShowPanel();
+        }
     }
 }
